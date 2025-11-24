@@ -139,7 +139,7 @@ main :: IO ()
 main = do
     contents <- readFile "test/equ.txt"
     let pattern = filter (not . null) $ splitKeepDelims "+-*/()" (removeWhitespace contents)
-    -- lex inot tokens and get all of the numbers
+    -- lex into tokens and get all of the numbers
     -- I will got through and keep track of how many numbers I have seen so that when I see a new one it is that element of the number list
     let numberList = filterNumbers pattern
     let tokenList = lexer pattern
