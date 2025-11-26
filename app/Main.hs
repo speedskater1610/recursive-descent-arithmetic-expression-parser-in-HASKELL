@@ -11,7 +11,7 @@ splitKeepDelims delims str = split' str []
           if null acc 
           then [c] : split' cs []
           else reverse acc : [c] : split' cs []
-      | otherwise = split' cs (c:acc)
+      | otherwise = split' cs (c:acc) 
 
 -- simple helpers function to remove whitespace
 removeWhitespace :: String -> String
